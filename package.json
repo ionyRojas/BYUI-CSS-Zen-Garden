@@ -1,0 +1,12 @@
+{
+  "name": "byui-zen-garden",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "sass ./style.scss ./style.css"
+  },
+  "dependencies": {
+    "sass": "1.60.0"
+  },
+  "keywords": []
+}

@@ -1,0 +1,105 @@
+@use "assets/variables" as *;
+
+@mixin set-flex {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    background-color: $primary;
+    padding: 5%;
+}
+
+body{
+    font-family: $fonts-paragraph;
+    color: $five-color;
+    background-color: $secondary;
+    margin: 0;
+    padding: 1em;  
+}
+
+h1{
+    font-family: $fonts-title;
+    background-color: $five-color;
+    padding: 1em;
+    max-width: 50%;
+    color: $six-color;
+}
+
+h2, h3, h4, h5{
+    font-family: $fonts-subtitle;
+}
+
+section {
+    background-color: $six-color;
+    padding: 1em;
+    margin: 1em;
+
+    h3{
+        color: $primary;
+    }
+
+    .font_p{
+        font-family: $fonts-paragraph;
+    }
+
+    .font_t{
+        font-family: $fonts-title;
+    }
+
+    .font_s{
+        font-family: $fonts-subtitle;
+    }
+}
+
+.colors {
+    @include set-flex();
+  > h3 {
+    width: 100%;
+    flex: 1 0 100%;
+
+  }
+  > figure {
+    margin: 0;
+    flex: 1 1 15%;
+  }
+}
+
+.swatch {
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+
+    figcaption{
+        font-weight: bold;
+    }
+}
+
+.primary{
+    background-color: $primary;
+}
+
+.secondary{
+    background-color: $secondary;
+}
+
+.third{
+    background-color: $third;
+}
+
+.fourth-color{
+    background-color: $fourth-color;
+}
+
+.five-color{
+    background-color: $five-color;
+    color: $secondary;
+}
+
+.six-color{
+    background-color: $six-color
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:wght@400;600&family=Urbanist:wght@400;600&display=swap');
+
+$primary: #326508;
+$secondary: #F9F6EE;
+$third: #F2E205;
+$fourth-color: #F20505;
+$five-color: #013440;
+$six-color: #82C0D9;
+$seven-color: #fff5db;
+$white: #ffffff;
+$whites: #ffffff;
+
+
+$fonts-title: 'Bruno Ace SC', cursive;
+$fonts-subtitle: 'Chakra Petch', sans-serif;
+$fonts-paragraph: 'Urbanist', sans-serif;
+
+$background-primary: 
+  radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#3e6f17 54% 57%,#0000 59%) 0 calc(40px/2),
+  radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#3e6f17 54% 57%,#0000 59%) calc(40px/2) 0,
+  radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#3e6f17 54% 57%,#0000 59%),
+  radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#3e6f17 54% 57%,#0000 59%),
+  #326508;;
+
+// @TODO: Next Accents TBD
+
+
+
+$vw-tablet: 768px;
+$vw-laptop: 1024px;
+$vw-large-screens: 1200px;

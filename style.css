@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:wght@400;600&family=Urbanist:wght@400;600&display=swap");
+a {
+  color: #82C0D9;
+  text-decoration: none;
+  position: relative;
+}
+a::after {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: pink;
+}
+
+h1, h2, h3 {
+  font-family: "Bruno Ace SC", cursive;
+  color: #F2E205;
+}
+
+p {
+  color: #F9F6EE;
+  font-size: 1.1rem;
+}
+
+/*
+* Function to get media queries
+* @param {number} $size - used to set a value for the media querie validation
+* @param {boolean} $is-min-width - used to validate if the media querie is min-width or max-width
+*/
+/*
+* Media querie to use Mobile only viewports
+*/
+/*
+* Media querie to use Extra Large (1200px) and up viewports
+*/
+/*
+* Media querie to use laptop (1024px) and up viewports
+*/
+/*
+* Media querie to use tablet (768px) and up viewports
+*/
+div[role=article] {
+  background: rgba(0, 0, 0, 0.21);
+  padding: 20px;
+  margin: 30px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.intro div[role=article]:first-of-type {
+  margin-top: 220px;
+}
+
+.summary {
+  transform: translate(-90%);
+  transition: transform 2s;
+  width: 50%;
+}
+.summary:hover {
+  transform: translate(0);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Urbanist", sans-serif;
+  cursor: url("assets/soccer.png"), auto;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  background: #326508;
+  background: radial-gradient(farthest-side at -33.33% 50%, rgba(0, 0, 0, 0) 52%, #3e6f17 54% 57%, rgba(0, 0, 0, 0) 59%) 0 20px, radial-gradient(farthest-side at 50% 133.33%, rgba(0, 0, 0, 0) 52%, #3e6f17 54% 57%, rgba(0, 0, 0, 0) 59%) 20px 0, radial-gradient(farthest-side at 133.33% 50%, rgba(0, 0, 0, 0) 52%, #3e6f17 54% 57%, rgba(0, 0, 0, 0) 59%), radial-gradient(farthest-side at 50% -33.33%, rgba(0, 0, 0, 0) 52%, #3e6f17 54% 57%, rgba(0, 0, 0, 0) 59%), #326508;
+  background-size: 8.5708163703px 40px, 40px 8.5708163703px;
+  padding: 35px 48px;
+  outline: 5px solid #F9F6EE;
+  outline-offset: -35px;
+}
+.page-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20vw;
+  height: 20vw;
+  outline: 5px solid #F9F6EE;
+  background: #326508;
+  border-radius: 50%;
+  z-index: 2;
+}
+.page-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  width: calc(100% - 70px);
+  height: 5px;
+  background: #F9F6EE;
+}
+
+header {
+  left: 50%;
+  outline: 5px solid #F9F6EE;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 35px;
+  width: 50%;
+  height: min(12%, 200px);
+}
+
+footer {
+  left: 50%;
+  outline: 5px solid #F9F6EE;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 35px;
+  width: 50%;
+  height: min(12%, 200px);
+}
+
+/*# sourceMappingURL=style.css.map */

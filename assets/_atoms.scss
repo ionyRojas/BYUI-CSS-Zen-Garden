@@ -1,0 +1,89 @@
+@use "variables" as *;
+
+@mixin penalty-box {
+  left: 50%;
+  outline: 5px solid $secondary;
+  transform: translateX(-50%);
+}
+
+a {
+  color: $six-color;
+  text-decoration: none;
+  position: relative;
+  
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: pink;
+  }
+}
+
+
+h1, h2, h3 {
+  font-family: $fonts-title;
+  color: $third;
+}
+
+p {
+  color: $secondary;
+  font-size: 1.1rem;
+}
+
+
+/*
+* Function to get media queries
+* @param {number} $size - used to set a value for the media querie validation
+* @param {boolean} $is-min-width - used to validate if the media querie is min-width or max-width
+*/
+@mixin media-viewport($size, $is-min-width: true) {
+  @if $is-min-width {
+    @media (width >= $size) {
+      @content;
+    }
+  } @else {
+      @media (width <= $size) {
+        @content;
+      }
+  }
+}
+
+
+/*
+* Media querie to use Mobile only viewports
+*/
+@mixin mobile-only {
+  @include media-viewport($vw-tablet, false) {
+    @content;
+  }
+}
+
+/*
+* Media querie to use Extra Large (1200px) and up viewports
+*/
+@mixin extra-large-and-up {
+  @include media-viewport($vw-large-screens) {
+    @content;
+  }
+}
+
+/*
+* Media querie to use laptop (1024px) and up viewports
+*/
+@mixin laptop-and-up {
+  @include media-viewport($vw-laptop) {
+    @content;
+  }
+}
+
+/*
+* Media querie to use tablet (768px) and up viewports
+*/
+@mixin tablet-and-up {
+  @include media-viewport($vw-tablet) {
+    @content;
+  }
+}
