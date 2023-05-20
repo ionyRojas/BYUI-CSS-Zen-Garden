@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:wght@400;600&family=Urbanist:wght@400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #326508;
+  padding: 5%;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  color: #013440;
+  background-color: #F9F6EE;
+  margin: 0;
+  padding: 1em;
+}
+
+h1 {
+  font-family: "Bruno Ace SC", cursive;
+  background-color: #013440;
+  padding: 1em;
+  max-width: 50%;
+  color: #82C0D9;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+section {
+  background-color: #82C0D9;
+  padding: 1em;
+  margin: 1em;
+}
+section h3 {
+  color: #326508;
+}
+section .font_p {
+  font-family: "Urbanist", sans-serif;
+}
+section .font_t {
+  font-family: "Bruno Ace SC", cursive;
+}
+section .font_s {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.colors {
+  display: flex;
+  flex-flow: wrap;
+}
+.colors > h3 {
+  width: 100%;
+  flex: 1 0 100%;
+}
+.colors > figure {
+  margin: 0;
+  flex: 1 1 15%;
+}
+
+.swatch {
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+}
+.swatch figcaption {
+  font-weight: bold;
+}
+
+.primary {
+  background-color: #326508;
+}
+
+.secondary {
+  background-color: #F9F6EE;
+}
+
+.third {
+  background-color: #F2E205;
+}
+
+.fourth-color {
+  background-color: #F20505;
+}
+
+.five-color {
+  background-color: #013440;
+  color: #F9F6EE;
+}
+
+.six-color {
+  background-color: #82C0D9;
+}/*# sourceMappingURL=pattern.css.map */

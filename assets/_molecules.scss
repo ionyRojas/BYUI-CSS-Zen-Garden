@@ -27,6 +27,62 @@ div[role="article"] {
   }
 }
 
+.preamble{
+  width: 50%;
+  transform: translate(110%);
+  transition: transform 2s;
+  width: 80%;
+
+  &:hover {
+    transform: translate(0);
+  }
+}
+
+.explanation{
+  line-height: 1.3em;
+  animation: line 6s linear;
+  border-block: 1px solid #F9F6EE;
+  animation: move-border 5s linear infinite;
+
+  @keyframes line {
+    50%{ line-height: 3em;}
+  }
+
+  @keyframes move-border {
+    50%{ border-block: 15px solid #F20505;}
+}
+}
+
+.participation{
+  border-block: 1px solid #013440;
+  animation: move-border-one 5s linear infinite;
+
+  @keyframes move-border-one {
+      50%{ border-block: 15px solid #82C0D9;}
+  }
+}
+
+.benefits{
+  transform: translate(-90%);
+  transition: transform 2s;
+  width: 50%;
+
+  &:hover {
+    transform: translate(0);
+  }
+}
+
+.requirements{
+  width: 50%;
+  transform: translate(110%);
+  transition: transform 2s;
+  width: 80%;
+
+  &:hover {
+    transform: translate(0);
+  }
+}
+
 // .extra1 {
 //   width: 50vw;
 //   height: 100vh;
