@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+h1 ,h2 ,p , span {
+  margin: 0;
+}
+
 body {
   min-height: 100vh;
   width: 100vw; 
@@ -23,10 +27,10 @@ body {
   background: $primary;
   background: $background-primary;
   background-size: calc(40px/4.667) 40px,40px calc(40px/4.667);
-
-  padding: 35px 48px;
+  padding: 35px 30px;
   outline: 5px solid $secondary;
   outline-offset: -35px;
+
   &::before {
     content: '';
     position: absolute;
@@ -50,6 +54,10 @@ body {
     width: calc(100% - 70px);
     height: 5px;
     background: $secondary;
+  }
+
+  @include atoms.tablet-and-up {
+    padding: 35px 48px;
   }
 }
 
