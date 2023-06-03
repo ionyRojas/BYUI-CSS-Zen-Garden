@@ -1,9 +1,54 @@
 @use "variables" as *;
+@use "atoms";
 
 nav {
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+}
+
+header {
+  overflow: hidden;
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    background: #F2E205;
+    background: linear-gradient(to right, #F2E205 0%, #F20505 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slide-down 1s;
+    margin: 0.5rem;
+    
+    @include atoms.tablet-and-up {
+      margin: 1rem;
+      font-size: 3rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    animation: slide-up 1s ;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
