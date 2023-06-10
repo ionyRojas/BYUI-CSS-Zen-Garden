@@ -1,6 +1,31 @@
 @use "variables" as *;
 @use "atoms";
 
+#zen-preamble, #zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+.preamble h3, .preamble p {
+  grid-column: 1/2;
+}
+
+.explanation h3, .explanation p {
+  grid-column: 2/3;
+}
+
+.participation h3, .participation p {
+  grid-column: 1/2;
+}
+
+.benefits h3, .benefits p {
+  grid-column: 2/3;
+}
+
+.requirements h3, .requirements p {
+  grid-column: 1/2;
+}
+
 nav {
   ul {
     list-style: none;

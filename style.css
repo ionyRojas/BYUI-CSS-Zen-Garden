@@ -63,8 +63,12 @@ div[role=article] p {
 
 .summary {
   transition: transform 2s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
   width: 100%;
-  text-align: justify;
 }
 .summary:hover {
   transform: translate(0);
@@ -88,6 +92,11 @@ div[role=article] p {
   }
 }
 
+.summary p {
+  color: #82C0D9;
+  font-size: 1.4em;
+}
+
 .preamble {
   transition: transform 2s;
 }
@@ -100,7 +109,8 @@ div[role=article] p {
   height: 131px;
   width: 63px;
   background-repeat: no-repeat;
-  right: 0;
+  right: 200px;
+  top: 50px;
   transform: rotate3d(1, -11, 1, -180deg);
 }
 .preamble:hover {
@@ -161,6 +171,31 @@ div[role=article] p {
 }
 .requirements:hover {
   transform: translate(0);
+}
+
+#zen-preamble, #zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.preamble h3, .preamble p {
+  grid-column: 1/2;
+}
+
+.explanation h3, .explanation p {
+  grid-column: 2/3;
+}
+
+.participation h3, .participation p {
+  grid-column: 1/2;
+}
+
+.benefits h3, .benefits p {
+  grid-column: 2/3;
+}
+
+.requirements h3, .requirements p {
+  grid-column: 1/2;
 }
 
 nav ul {
@@ -285,6 +320,4 @@ footer {
   bottom: 35px;
   width: 50%;
   height: min(12%, 200px);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
