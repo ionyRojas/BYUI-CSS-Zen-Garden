@@ -63,20 +63,24 @@ div[role=article] p {
 
 .summary {
   transition: transform 2s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
   width: 100%;
-  text-align: justify;
 }
 .summary:hover {
   transform: translate(0);
 }
 .summary::before {
+  background: url("assets/player_one.svg");
   content: "";
-  background: url("assets/player.svg");
   top: 100%;
   position: absolute;
   background-size: 101%;
-  height: 131px;
-  width: 63px;
+  height: 330px;
+  width: 300px;
   background-repeat: no-repeat;
   left: 0;
 }
@@ -88,19 +92,24 @@ div[role=article] p {
   }
 }
 
+.summary p {
+  color: #82C0D9;
+  font-size: 1.4em;
+}
+
 .preamble {
   transition: transform 2s;
 }
 .preamble::before {
+  background: url("assets/player_two.svg");
   content: "";
-  background: url("assets/player.svg");
   top: 100%;
   position: absolute;
   background-size: 101%;
-  height: 131px;
-  width: 63px;
+  height: 330px;
+  width: 300px;
   background-repeat: no-repeat;
-  right: 0;
+  width: 170px;
   transform: rotate3d(1, -11, 1, -180deg);
 }
 .preamble:hover {
@@ -108,38 +117,38 @@ div[role=article] p {
 }
 
 .explanation::before {
+  background: url("assets/player_eight.svg");
   content: "";
-  background: url("assets/player.svg");
   top: 100%;
   position: absolute;
   background-size: 101%;
-  height: 131px;
-  width: 63px;
+  height: 330px;
+  width: 300px;
   background-repeat: no-repeat;
   left: 0;
 }
 
 .participation::before {
+  background: url("assets/player_six.svg");
   content: "";
-  background: url("assets/player.svg");
   top: 100%;
   position: absolute;
   background-size: 101%;
-  height: 131px;
-  width: 63px;
+  height: 330px;
+  width: 300px;
   background-repeat: no-repeat;
   right: 0;
   transform: rotate3d(1, -11, 1, -180deg);
 }
 
 .benefits::before {
+  background: url("assets/player_seven.svg");
   content: "";
-  background: url("assets/player.svg");
   top: 100%;
   position: absolute;
   background-size: 101%;
-  height: 131px;
-  width: 63px;
+  height: 330px;
+  width: 300px;
   background-repeat: no-repeat;
   left: 0;
 }
@@ -149,18 +158,42 @@ div[role=article] p {
 
 .requirements::before {
   content: "";
-  background: url("assets/player.svg");
   top: 100%;
   position: absolute;
   background-size: 101%;
-  height: 131px;
-  width: 63px;
+  height: 330px;
+  width: 300px;
   background-repeat: no-repeat;
   right: 0;
   transform: rotate3d(1, -11, 1, -180deg);
 }
 .requirements:hover {
   transform: translate(0);
+}
+
+#zen-preamble, #zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.preamble h3, .preamble p {
+  grid-column: 1/2;
+}
+
+.explanation h3, .explanation p {
+  grid-column: 2/3;
+}
+
+.participation h3, .participation p {
+  grid-column: 1/2;
+}
+
+.benefits h3, .benefits p {
+  grid-column: 2/3;
+}
+
+.requirements h3, .requirements p {
+  grid-column: 1/2;
 }
 
 nav ul {
@@ -285,6 +318,4 @@ footer {
   bottom: 35px;
   width: 50%;
   height: min(12%, 200px);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
