@@ -29,12 +29,14 @@ div[role="article"] {
 
 @mixin before-player {
   content: "";
-    background: url("assets/player.svg");
+    // background: url("assets/player.svg");
     top: 100%;
     position: absolute;
     background-size: 101%;
-    height: 131px;
-    width: 63px;
+    // height: 131px;
+    // width: 63px;
+    height: 330px;
+    width: 300px;
     background-repeat: no-repeat;
 }
 
@@ -52,6 +54,7 @@ div[role="article"] {
   }
 
   &::before {
+    background: url("assets/player_one.svg");
     @include before-player();
     left: 0;
   }
@@ -69,13 +72,12 @@ div[role="article"] {
 }
 
 .preamble{
-  transition: transform 2s;
+  transition: transform 2s; 
 
   &::before {
+    background: url("assets/player_two.svg");
     @include before-player();
-
-    right: 200px;
-    top: 50px;
+    width: 170px;
     transform: rotate3d(1, -11, 1, -180deg);
   }
 
@@ -86,6 +88,7 @@ div[role="article"] {
 
 .explanation{
   &::before {
+    background: url("assets/player_eight.svg");
     @include before-player();
     left: 0;
   }
@@ -105,6 +108,7 @@ div[role="article"] {
 
 .participation{
   &::before {
+    background: url("assets/player_six.svg");
     @include before-player();
     right: 0;
     transform: rotate3d(1, -11, 1, -180deg);
@@ -123,6 +127,7 @@ div[role="article"] {
   // width: 50%;
 
   &::before {
+    background: url("assets/player_seven.svg");
     @include before-player();
     left: 0;
   }
