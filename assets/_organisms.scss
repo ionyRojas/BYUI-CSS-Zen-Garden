@@ -1,9 +1,11 @@
 @use "variables" as *;
 @use "atoms";
 
-#zen-preamble, #zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
-  display: grid;
-  grid-template-columns: 1fr 1fr
+.preamble, .explanation, .participation, .benefits, .requirements {
+  @include atoms.tablet-and-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr
+  }
 }
 
 .preamble h3, .preamble p {
@@ -75,5 +77,124 @@ header {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+.sidebar {
+  h3 {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    list-style-type: disclosure-closed;
+    margin-left: 12px;
+    padding-left: 12px;
+    li {
+      margin-bottom: 12px;
+      color: $six-color;
+
+      a {
+        &::after {
+          background-color: $fourth-color;
+        }
+      }
+    }
+    
+  }
+}
+
+@mixin shared-sidebar {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 10;
+  transform: translateX(100%);
+  padding: 20px;
+  transition: transform 0.5s;
+  background-color: $five-color;
+}
+
+.design-selection {
+  @include shared-sidebar();
+  top: 30%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 30px;
+    height: 30px;
+    background: url("assets/brasil.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &:hover {
+    transform: translateX(calc(0% - 38px));
+    transition: transform 0.5s;
+  }
+
+  @include atoms.tablet-and-up {
+    top: 30%;
+  }
+}
+
+.design-archives {
+  @include shared-sidebar();
+  top: 40%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 30px;
+    height: 30px;
+    background: url("assets/col.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &:hover {
+    transition: transform 0.5s;
+    transform: translateX(calc(0% - 38px));
+
+  }
+
+  @include atoms.tablet-and-up {
+    top: 40%;
+  }
+}
+
+.zen-resources {
+  @include shared-sidebar();
+  top: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 30px;
+    height: 30px;
+    background: url("assets/usa.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  }
+
+  &:hover {
+    transition: transform 0.5s;
+    transform: translateX(calc(0% - 38px));
+
+  }
+
+  @include atoms.tablet-and-up {
+    top: 50%;
   }
 }
