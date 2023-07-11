@@ -51,9 +51,9 @@ p {
   }
 }
 
-
 /*
 * Media querie to use Mobile only viewports
+* between 320px and 767px
 */
 @mixin mobile-only {
   @include media-viewport($vw-tablet, false) {
@@ -63,6 +63,7 @@ p {
 
 /*
 * Media querie to use Extra Large (1200px) and up viewports
+* between 1200px and 9999px
 */
 @mixin extra-large-and-up {
   @include media-viewport($vw-large-screens) {
@@ -72,6 +73,7 @@ p {
 
 /*
 * Media querie to use laptop (1024px) and up viewports
+* between 1024px and 9999px
 */
 @mixin laptop-and-up {
   @include media-viewport($vw-laptop) {
@@ -81,6 +83,7 @@ p {
 
 /*
 * Media querie to use tablet (768px) and up viewports
+* between 768px and 9999px
 */
 @mixin tablet-and-up {
   @include media-viewport($vw-tablet) {

@@ -1,21 +1,46 @@
 @use "variables" as *;
 @use "atoms";
 
+.supporting {
+  div[role="article"] {
+    &:last-of-type {
+      margin: 200px 0 420px;
+
+      @include atoms.tablet-and-up {
+        margin-bottom: 280px;
+      }
+    }
+  }
+  
+}
+
 div[role="article"] {
   background: rgb(0 0 0 / 30%);
   padding: 20px;
-  margin: 70px 0;
+  margin: 200px 0;
   position: relative;
   z-index: 2;
   text-align: justify;
+  
+  @include atoms.tablet-and-up {
+    margin: 70px 0;
+  }
 
   h3 {
     text-align: center;
+
+    @include atoms.tablet-and-up {
+      font-size: 2rem;
+    }
   }
 
   p {
     margin-bottom: 1rem;
-    line-height: 1.4rem;
+    line-height: 1.4;
+
+    @include atoms.tablet-and-up {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -29,15 +54,19 @@ div[role="article"] {
 
 @mixin before-player {
   content: "";
-    // background: url("assets/player.svg");
-    top: 100%;
-    position: absolute;
-    background-size: 101%;
-    // height: 131px;
-    // width: 63px;
-    height: 330px;
-    width: 300px;
-    background-repeat: no-repeat;
+  top: 100%;
+  left: 15%;
+  position: absolute;
+  background-repeat: no-repeat;
+  filter: drop-shadow(2px 4px 6px black);
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  
+  @include atoms.tablet-and-up {
+    top: 0%;
+    left: 0%;
+  }
 }
 
 .summary {
@@ -56,7 +85,13 @@ div[role="article"] {
   &::before {
     background: url("assets/player_one.svg");
     @include before-player();
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    @include atoms.tablet-and-up { 
+      opacity: 0.4;
+    }
+
   }
   
   @include atoms.tablet-and-up {
@@ -77,8 +112,13 @@ div[role="article"] {
   &::before {
     background: url("assets/player_two.svg");
     @include before-player();
-    width: 170px;
+    width: 150px;
+    height: 170px;
     transform: rotate3d(1, -11, 1, -180deg);
+
+    @include atoms.tablet-and-up {
+      left: 70%;
+    }
   }
 
   &:hover {
@@ -90,46 +130,30 @@ div[role="article"] {
   &::before {
     background: url("assets/player_eight.svg");
     @include before-player();
-    left: 0;
+    left: 15%;
+    height: 400px;
   }
-//   line-height: 1.3em;
-//   animation: line 6s linear;
-//   border-block: 1px solid #F9F6EE;
-//   animation: move-border 5s linear infinite;
-
-//   @keyframes line {
-//     50%{ line-height: 3em;}
-//   }
-
-//   @keyframes move-border {
-//     50%{ border-block: 15px solid #F20505;}
-// }
 }
 
 .participation{
   &::before {
     background: url("assets/player_six.svg");
     @include before-player();
-    right: 0;
-    transform: rotate3d(1, -11, 1, -180deg);
-  }
-  // border-block: 1px solid #013440;
-  // animation: move-border-one 5s linear infinite;
+    transform:  rotate3d(1, -11, 1, -180deg);
 
-  // @keyframes move-border-one {
-  //     50%{ border-block: 15px solid #82C0D9;}
-  // }
+    @include atoms.tablet-and-up {
+      left: 70%;
+    }
+  }
 }
 
 .benefits{
-  // transform: translate(-90%);
-  // transition: transform 2s;
-  // width: 50%;
 
   &::before {
     background: url("assets/player_seven.svg");
     @include before-player();
-    left: 0;
+    height: 360px;
+    width: 192px;
   }
 
   &:hover {
@@ -138,15 +162,22 @@ div[role="article"] {
 }
 
 .requirements{
-  // width: 50%;
-  // transform: translate(110%);
-  // transition: transform 2s;
-  // width: 80%;
-
   &::before {
     @include before-player();
     right: 0;
-    transform: rotate3d(1, -11, 1, -180deg);
+    background: url("assets/player_five.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  @include atoms.tablet-and-up {
+    &::before {
+      @include before-player();
+      right: 0;
+      background: url("assets/player_five.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   &:hover {
@@ -154,34 +185,3 @@ div[role="article"] {
   }
 }
 
-// .extra1 {
-//   width: 50vw;
-//   height: 100vh;
-//   position: absolute;
-//   background-color: black;
-//   top: 0;
-//   left: 0;
-//   z-index: 2;
-//   animation: livia-animation 5s;
-// }
-
-// .extra2 {
-//   width: 50vw;
-//   height: 100vh;
-//   position: absolute;
-//   background-color: blue;
-//   top: 0;
-//   left: 50%;
-//   z-index: 2;
-//   animation: livia-animation-2 5s;
-// }
-
-// @keyframes livia-animation {
-//   0%    { left: 0; }
-//   100%  { left: -50%; }
-// }
-
-// @keyframes livia-animation-2 {
-//   0%    { left: 50%; }
-//   100%  { left: 100%; }
-// }

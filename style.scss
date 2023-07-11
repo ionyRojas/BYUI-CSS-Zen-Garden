@@ -68,7 +68,7 @@ header {
   top: 35px;
   width: 50%;
   height: min(12%, 200px);
-  
+  background-color: #013440;
 }
 
 footer {
@@ -78,5 +78,30 @@ footer {
   bottom: 35px;
   width: 50%;
   height: min(12%, 200px);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #013440;
+
+  a {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    color: #013440;
+    font-weight: bold;
+    background: linear-gradient(to right, #F2E205 0%, #F20505 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.7rem;
+
+    &:hover {
+      font-size: 1.9rem;
+    }
+    
+    &::after {
+      content: '';
+      height: 0;
+    }
+  }
 }
 
