@@ -184,6 +184,8 @@ div[role=article] p {
   width: 200px;
   height: 200px;
   left: 15%;
+  width: 110px;
+  margin-top: 5%;
   height: 400px;
 }
 @media (width >= 768px) {
@@ -230,7 +232,8 @@ div[role=article] p {
   width: 200px;
   height: 200px;
   height: 360px;
-  width: 192px;
+  width: 90px;
+  margin-top: 3%;
 }
 @media (width >= 768px) {
   .benefits::before {
@@ -256,6 +259,8 @@ div[role=article] p {
   background: url("assets/player_five.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  height: 180px;
+  margin-top: 5%;
 }
 @media (width >= 768px) {
   .requirements::before {
@@ -578,6 +583,4 @@ footer a:hover {
 footer a::after {
   content: "";
   height: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
