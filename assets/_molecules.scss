@@ -131,6 +131,8 @@ div[role="article"] {
     background: url("assets/player_eight.svg");
     @include before-player();
     left: 15%;
+    width:110px;
+    margin-top: 5%;
     height: 400px;
   }
 }
@@ -153,7 +155,8 @@ div[role="article"] {
     background: url("assets/player_seven.svg");
     @include before-player();
     height: 360px;
-    width: 192px;
+    width: 90px;
+    margin-top: 3%;
   }
 
   &:hover {
@@ -168,6 +171,8 @@ div[role="article"] {
     background: url("assets/player_five.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    height: 180px;
+    margin-top: 5%;
   }
   
   @include atoms.tablet-and-up {
