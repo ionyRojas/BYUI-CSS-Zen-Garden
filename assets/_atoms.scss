@@ -18,7 +18,7 @@ a {
     content: "";
     height: 2px;
     width: 100%;
-    background-color: pink;
+    background-color: $fourth-color;
   }
 }
 
@@ -30,7 +30,11 @@ h1, h2, h3 {
 
 p {
   color: $secondary;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+
+abbr {
+  color: $six-color;
 }
 
 

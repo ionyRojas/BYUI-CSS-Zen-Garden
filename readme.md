@@ -16,7 +16,6 @@ For us South Americans football is much more than a simple game, it represents p
 
 - Livia Pimentel
 - Jonathan Rojas
-- Luis Castillo
 
 ## Atomic Design
 
