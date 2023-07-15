@@ -52,7 +52,7 @@ abbr {
 .supporting div[role=article]:last-of-type {
   margin: 200px 0 420px;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .supporting div[role=article]:last-of-type {
     margin-bottom: 280px;
   }
@@ -66,7 +66,7 @@ div[role=article] {
   z-index: 2;
   text-align: justify;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   div[role=article] {
     margin: 70px 0;
   }
@@ -74,7 +74,7 @@ div[role=article] {
 div[role=article] h3 {
   text-align: center;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   div[role=article] h3 {
     font-size: 2rem;
   }
@@ -83,7 +83,7 @@ div[role=article] p {
   margin-bottom: 1rem;
   line-height: 1.4;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   div[role=article] p {
     font-size: 1.5rem;
   }
@@ -111,23 +111,18 @@ div[role=article] p {
   top: 100%;
   left: 15%;
   position: absolute;
-  background-repeat: no-repeat;
   filter: drop-shadow(2px 4px 6px black);
+  background-repeat: no-repeat;
   background-size: contain;
   width: 200px;
   height: 200px;
   left: 50%;
   transform: translateX(-50%);
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .summary::before {
     top: 0%;
     left: 0%;
-  }
-}
-@media (width >= 768px) {
-  .summary::before {
-    opacity: 0.4;
   }
 }
 @media (width >= 1024px) {
@@ -138,32 +133,31 @@ div[role=article] p {
     height: 150px;
   }
 }
-@media (width >= 768px) {
-  .summary {
-    height: 211px;
-    width: 113px;
-    width: 100%;
+.summary::after {
+  content: "";
+  top: 100%;
+  left: 15%;
+  position: absolute;
+  filter: drop-shadow(2px 4px 6px black);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+@media (width >= 1024px) {
+  .summary::after {
+    top: 0%;
+    left: 0%;
   }
 }
 @media (width >= 1024px) {
   .summary::after {
     background: url("assets/player_three.svg");
-    content: "";
-    top: 100%;
-    left: 15%;
-    position: absolute;
     background-repeat: no-repeat;
-    filter: drop-shadow(2px 4px 6px black);
     background-size: contain;
-    width: 200px;
-    height: 200px;
+    top: 50%;
+    left: 4%;
     height: 150px;
-  }
-}
-@media (width >= 1024px) and (width >= 768px) {
-  .summary::after {
-    top: 0%;
-    left: 0%;
   }
 }
 
@@ -181,8 +175,8 @@ div[role=article] p {
   top: 100%;
   left: 15%;
   position: absolute;
-  background-repeat: no-repeat;
   filter: drop-shadow(2px 4px 6px black);
+  background-repeat: no-repeat;
   background-size: contain;
   width: 200px;
   height: 200px;
@@ -190,7 +184,7 @@ div[role=article] p {
   height: 170px;
   transform: rotate3d(1, -11, 1, -180deg);
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .preamble::before {
     top: 0%;
     left: 0%;
@@ -198,7 +192,7 @@ div[role=article] p {
 }
 @media (width >= 768px) {
   .preamble::before {
-    left: 70%;
+    left: 38%;
   }
 }
 @media (width >= 1024px) {
@@ -218,8 +212,8 @@ div[role=article] p {
   top: 100%;
   left: 15%;
   position: absolute;
-  background-repeat: no-repeat;
   filter: drop-shadow(2px 4px 6px black);
+  background-repeat: no-repeat;
   background-size: contain;
   width: 200px;
   height: 200px;
@@ -228,10 +222,15 @@ div[role=article] p {
   margin-top: 5%;
   height: 400px;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .explanation::before {
     top: 0%;
     left: 0%;
+  }
+}
+@media (width >= 768px) {
+  .explanation::before {
+    left: 47%;
   }
 }
 @media (width >= 1024px) {
@@ -249,14 +248,14 @@ div[role=article] p {
   top: 100%;
   left: 15%;
   position: absolute;
-  background-repeat: no-repeat;
   filter: drop-shadow(2px 4px 6px black);
+  background-repeat: no-repeat;
   background-size: contain;
   width: 200px;
   height: 200px;
   transform: rotate3d(1, -11, 1, -180deg);
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .participation::before {
     top: 0%;
     left: 0%;
@@ -264,7 +263,7 @@ div[role=article] p {
 }
 @media (width >= 768px) {
   .participation::before {
-    left: 70%;
+    left: 41%;
   }
 }
 @media (width >= 1024px) {
@@ -282,8 +281,8 @@ div[role=article] p {
   top: 100%;
   left: 15%;
   position: absolute;
-  background-repeat: no-repeat;
   filter: drop-shadow(2px 4px 6px black);
+  background-repeat: no-repeat;
   background-size: contain;
   width: 200px;
   height: 200px;
@@ -291,10 +290,15 @@ div[role=article] p {
   width: 90px;
   margin-top: 3%;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .benefits::before {
     top: 0%;
     left: 0%;
+  }
+}
+@media (width >= 768px) {
+  .benefits::before {
+    left: 45%;
   }
 }
 @media (width >= 1024px) {
@@ -313,8 +317,8 @@ div[role=article] p {
   top: 100%;
   left: 15%;
   position: absolute;
-  background-repeat: no-repeat;
   filter: drop-shadow(2px 4px 6px black);
+  background-repeat: no-repeat;
   background-size: contain;
   width: 200px;
   height: 200px;
@@ -325,7 +329,7 @@ div[role=article] p {
   height: 180px;
   margin-top: 5%;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .requirements::before {
     top: 0%;
     left: 0%;
@@ -333,28 +337,10 @@ div[role=article] p {
 }
 @media (width >= 768px) {
   .requirements::before {
-    content: "";
-    top: 100%;
-    left: 15%;
-    position: absolute;
-    background-repeat: no-repeat;
-    filter: drop-shadow(2px 4px 6px black);
-    background-size: contain;
-    width: 200px;
-    height: 200px;
-    right: 0;
-    background: url("assets/player_five.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+    left: 44%;
   }
 }
-@media (width >= 768px) and (width >= 768px) {
-  .requirements::before {
-    top: 0%;
-    left: 0%;
-  }
-}
-@media (width >= 768px) and (width >= 1024px) {
+@media (width >= 1024px) {
   .requirements::before {
     width: 750px;
     height: 450px;
@@ -366,7 +352,7 @@ div[role=article] p {
   transform: translate(0);
 }
 
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .preamble, .explanation, .participation, .benefits, .requirements {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -412,7 +398,7 @@ header h1 {
   animation: slide-down 1s;
   margin: 0.5rem;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   header h1 {
     margin: 1rem;
     font-size: 3rem;
@@ -484,7 +470,7 @@ header h2 {
   transform: translateX(calc(0% - 38px));
   transition: transform 0.5s;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .design-selection {
     top: 30%;
   }
@@ -517,7 +503,7 @@ header h2 {
   transition: transform 0.5s;
   transform: translateX(calc(0% - 38px));
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .design-archives {
     top: 40%;
   }
@@ -550,7 +536,7 @@ header h2 {
   transition: transform 0.5s;
   transform: translateX(calc(0% - 38px));
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .zen-resources {
     top: 50%;
   }
@@ -607,7 +593,7 @@ body {
   height: 5px;
   background: #F9F6EE;
 }
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .page-wrapper {
     padding: 35px 48px;
   }
@@ -654,4 +640,6 @@ footer a:hover {
 footer a::after {
   content: "";
   height: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

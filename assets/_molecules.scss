@@ -6,7 +6,7 @@
     &:last-of-type {
       margin: 200px 0 420px;
 
-      @include atoms.tablet-and-up {
+      @include atoms.laptop-and-up {
         margin-bottom: 280px;
       }
     }
@@ -22,14 +22,14 @@ div[role="article"] {
   z-index: 2;
   text-align: justify;
   
-  @include atoms.tablet-and-up {
+  @include atoms.laptop-and-up {
     margin: 70px 0;
   }
 
   h3 {
     text-align: center;
 
-    @include atoms.tablet-and-up {
+    @include atoms.laptop-and-up {
       font-size: 2rem;
     }
   }
@@ -38,7 +38,7 @@ div[role="article"] {
     margin-bottom: 1rem;
     line-height: 1.4;
 
-    @include atoms.tablet-and-up {
+    @include atoms.laptop-and-up {
       font-size: 1.5rem;
     }
   }
@@ -57,13 +57,13 @@ div[role="article"] {
   top: 100%;
   left: 15%;
   position: absolute;
-  background-repeat: no-repeat;
   filter: drop-shadow(2px 4px 6px black);
+  background-repeat: no-repeat;
   background-size: contain;
   width: 200px;
   height: 200px;
   
-  @include atoms.tablet-and-up {
+  @include atoms.laptop-and-up {
     top: 0%;
     left: 0%;
   }
@@ -87,10 +87,6 @@ div[role="article"] {
     @include before-player();
     left: 50%;
     transform: translateX(-50%);
-    
-    @include atoms.tablet-and-up { 
-      opacity: 0.4;
-    }
 
     @include atoms.laptop-and-up {
       opacity: 1;
@@ -99,17 +95,16 @@ div[role="article"] {
       height: 150px;
     }
   }
-  
-  @include atoms.tablet-and-up {
-    height: 211px;
-    width: 113px;
-    width: 100%;
-  }
 
-  @include atoms.laptop-and-up {
-    &::after{
+  &::after {
+    @include before-player();
+    
+    @include atoms.laptop-and-up {
       background: url("assets/player_three.svg");
-      @include before-player();
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 50%;
+      left: 4%;
       height: 150px;
     }
   }
@@ -132,7 +127,7 @@ div[role="article"] {
     transform: rotate3d(1, -11, 1, -180deg);
 
     @include atoms.tablet-and-up {
-      left: 70%;
+      left: 38%;
     }
 
     @include atoms.laptop-and-up {
@@ -156,6 +151,10 @@ div[role="article"] {
     margin-top: 5%;
     height: 400px;
 
+    @include atoms.tablet-and-up {
+      left: 47%;
+    }
+
     @include atoms.laptop-and-up {
       width: 500px;
       height: 400px;
@@ -173,7 +172,7 @@ div[role="article"] {
     transform:  rotate3d(1, -11, 1, -180deg);
 
     @include atoms.tablet-and-up {
-      left: 70%;
+      left: 41%;
     }
 
     @include atoms.laptop-and-up {
@@ -194,6 +193,10 @@ div[role="article"] {
     height: 360px;
     width: 90px;
     margin-top: 3%;
+
+    @include atoms.tablet-and-up {
+      left: 45%;
+    }
 
     @include atoms.laptop-and-up {
         width: 500px;
@@ -219,16 +222,11 @@ div[role="article"] {
     background-repeat: no-repeat;
     height: 180px;
     margin-top: 5%;
-  }
-  
-  @include atoms.tablet-and-up {
-    &::before {
-      @include before-player();
-      right: 0;
-      background: url("assets/player_five.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
+    
+    @include atoms.tablet-and-up {
+      left: 44%;
     }
+  }
 
   @include atoms.laptop-and-up {
       &::before {
@@ -238,7 +236,6 @@ div[role="article"] {
         left: 60%;
       }
     }
-  }
 
   &:hover {
     transform: translate(0);
