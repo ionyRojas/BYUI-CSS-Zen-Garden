@@ -2,7 +2,7 @@
 @use "atoms";
 
 .preamble, .explanation, .participation, .benefits, .requirements {
-  @include atoms.tablet-and-up {
+  @include atoms.laptop-and-up {
     display: grid;
     grid-template-columns: 1fr 1fr
   }
@@ -49,7 +49,7 @@ header {
     animation: slide-down 1s;
     margin: 0.5rem;
     
-    @include atoms.tablet-and-up {
+    @include atoms.laptop-and-up {
       margin: 1rem;
       font-size: 3rem;
     }
@@ -137,7 +137,7 @@ header {
     transition: transform 0.5s;
   }
 
-  @include atoms.tablet-and-up {
+  @include atoms.laptop-and-up {
     top: 30%;
   }
 }
@@ -165,7 +165,7 @@ header {
 
   }
 
-  @include atoms.tablet-and-up {
+  @include atoms.laptop-and-up {
     top: 40%;
   }
 }
@@ -194,7 +194,7 @@ header {
 
   }
 
-  @include atoms.tablet-and-up {
+  @include atoms.laptop-and-up {
     top: 50%;
   }
 }

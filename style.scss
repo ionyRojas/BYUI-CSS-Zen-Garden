@@ -56,7 +56,7 @@ body {
     background: $secondary;
   }
 
-  @include atoms.tablet-and-up {
+  @include atoms.laptop-and-up {
     padding: 35px 48px;
   }
 }
